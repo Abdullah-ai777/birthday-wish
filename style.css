@@ -1,0 +1,161 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background: linear-gradient(to right, #ff7e5f, #feb47b);
+    font-family: 'Roboto', sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    overflow: hidden;
+}
+
+.container {
+    text-align: center;
+    animation: fadeIn 2s ease-out;
+}
+
+.card {
+    background-color: #ffffff;
+    border-radius: 20px;
+    padding: 40px;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+    position: relative;
+    z-index: 1;
+    animation: bounceIn 1s ease-out;
+}
+
+h1 {
+    font-family: 'Sacramento', cursive;
+    font-size: 3.5em;
+    color: #ff4d4d;
+    margin-bottom: 10px;
+    animation: fadeInUp 1.5s ease-out;
+}
+
+.message {
+    font-size: 1.2em;
+    color: #333;
+    margin-bottom: 20px;
+    animation: fadeInUp 1.8s ease-out;
+}
+
+.balloons {
+    display: flex;
+    justify-content: center;
+    gap: 25px;
+}
+
+.balloon {
+    width: 70px;
+    height: 90px;
+    background-color: #ff7f50;
+    border-radius: 50%;
+    position: relative;
+    animation: floatUp 4s ease-in-out infinite;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+#balloon1 {
+    animation-delay: 0s;
+}
+
+#balloon2 {
+    animation-delay: 1s;
+}
+
+#balloon3 {
+    animation-delay: 2s;
+}
+
+.icons {
+    margin-top: 30px;
+    font-size: 2.5em;
+    color: #ff4d4d;
+}
+
+.icons i {
+    margin: 0 15px;
+    animation: iconBounce 2s ease-in-out infinite;
+}
+
+@keyframes fadeIn {
+    0% {
+        opacity: 0;
+        transform: scale(0.8);
+    }
+    100% {
+        opacity: 1;
+        transform: scale(1);
+    }
+}
+
+@keyframes fadeInUp {
+    0% {
+        opacity: 0;
+        transform: translateY(50px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes bounceIn {
+    0% {
+        transform: scale(0.8);
+    }
+    50% {
+        transform: scale(1.1);
+    }
+    100% {
+        transform: scale(1);
+    }
+}
+
+@keyframes floatUp {
+    0% {
+        transform: translateY(0);
+    }
+    50% {
+        transform: translateY(-50px);
+    }
+    100% {
+        transform: translateY(0);
+    }
+}
+
+@keyframes iconBounce {
+    0% {
+        transform: translateY(0);
+    }
+    50% {
+        transform: translateY(-10px);
+    }
+    100% {
+        transform: translateY(0);
+    }
+}
+
+@media (max-width: 600px) {
+    h1 {
+        font-size: 2.5em;
+    }
+
+    .message {
+        font-size: 1em;
+    }
+
+    .balloon {
+        width: 55px;
+        height: 75px;
+    }
+
+    .icons i {
+        font-size: 2em;
+    }
+}
